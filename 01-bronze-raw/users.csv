@@ -1,0 +1,51 @@
+user_id,nome,email,idade,genero,cidade,estado,cep,data_cadastro,ativo
+1,Ana Silva,ana.silva@email.com,28,F,Curitiba,PR,80010-000,2023-01-05,true
+2,Bruno Costa,bruno.costa@email.com,34,M,São Paulo,SP,01001-000,2022-11-10,true
+3,Camila Rocha,camila.rocha@email.com,22,F,Belo Horizonte,MG,30110-000,2023-02-14,true
+4,Daniel Pereira,daniel.p@email.com,41,M,Porto Alegre,RS,90010-000,2021-09-20,false
+5,Elisa Martins,elisa.m@email.com,31,F,Florianópolis,SC,88010-000,2022-05-18,true
+6,Felipe Souza,felipe.s@email.com,27,M,Rio de Janeiro,RJ,20010-000,2023-03-01,true
+7,Gabriela Lima,gabi.lima@email.com,39,F,Recife,PE,50010-000,2020-12-09,false
+8,Henrique Alves,henrique.a@email.com,45,M,Goiânia,GO,74010-000,2019-07-25,true
+9,Isabela Nunes,isabela.n@email.com,26,F,São Paulo,SP,01310-000,2023-04-10,true
+10,João Ribeiro,joao.r@email.com,33,M,Campinas,SP,13010-000,2022-08-15,true
+11,Karina Lopes,karina.l@email.com,29,F,Santos,SP,11010-000,2023-05-02,true
+12,Lucas Farias,lucas.f@email.com,36,M,Natal,RN,59010-000,2021-06-18,false
+13,Mariana Teixeira,mariana.t@email.com,24,F,Vitória,ES,29010-000,2023-03-22,true
+14,Nicolas Araujo,nicolas.a@email.com,42,M,Manaus,AM,69010-000,2020-10-30,true
+15,Patricia Melo,patricia.m@email.com,38,F,João Pessoa,PB,58010-000,2021-01-12,true
+16,Rafael Barros,rafael.b@email.com,35,M,Uberlândia,MG,38400-000,2022-02-05,true
+17,Sandra Pacheco,sandra.p@email.com,47,F,Campo Grande,MS,79010-000,2019-09-09,false
+18,Tiago Cunha,tiago.c@email.com,28,M,São José,SC,88110-000,2023-06-01,true
+19,Vanessa Freitas,vanessa.f@email.com,32,F,Sorocaba,SP,18010-000,2022-04-19,true
+20,Wesley Torres,wesley.t@email.com,40,M,Londrina,PR,86010-000,2021-11-11,true
+21,Amanda Reis,amanda.r@email.com,23,F,Ribeirão Preto,SP,14010-000,2023-05-15,true
+22,Carlos Mendes,carlos.m@email.com,37,M,Bauru,SP,17010-000,2022-01-20,true
+23,Daniela Pires,daniela.p@email.com,34,F,Taubaté,SP,12010-000,2021-10-02,true
+24,Eduardo Lima,eduardo.l@email.com,46,M,Aracaju,SE,49010-000,2020-08-18,false
+25,Fernanda Rocha,fernanda.r@email.com,29,F,Niterói,RJ,24010-000,2023-02-11,true
+26,Gustavo Freire,g.freire@email.com,41,M,Maceió,AL,57010-000,2019-12-07,true
+27,Helena Duarte,helena.d@email.com,27,F,Pelotas,RS,96010-000,2023-04-21,true
+28,Ivan Moreira,ivan.m@email.com,50,M,Santarém,PA,68010-000,2018-06-14,false
+29,Juliana Rios,juliana.r@email.com,36,F,Ilhéus,BA,45650-000,2021-03-09,true
+30,Kleber Santos,kleber.s@email.com,44,M,Itajaí,SC,88300-000,2020-05-30,true
+31,Laura Pinto,laura.p@email.com,25,F,Lavras,MG,37200-000,2023-01-19,true
+32,Marcos Vinicius,marcos.v@email.com,39,M,Barreiras,BA,47800-000,2021-09-01,true
+33,Natalia Coelho,natalia.c@email.com,31,F,Parnaíba,PI,64200-000,2022-06-23,true
+34,Otavio Braga,otavio.b@email.com,48,M,Divinópolis,MG,35500-000,2019-04-12,false
+35,Paula Azevedo,paula.a@email.com,34,F,Guarapuava,PR,85010-000,2022-07-07,true
+36,Ricardo Nogueira,ricardo.n@email.com,41,M,Santarém,PA,68020-000,2020-02-25,true
+37,Sabrina Farias,sabrina.f@email.com,26,F,Marília,SP,17500-000,2023-05-05,true
+38,Thiago Batista,thiago.b@email.com,38,M,Caruaru,PE,55010-000,2021-11-19,true
+39,Ursula Neves,ursula.n@email.com,45,F,Caxias do Sul,RS,95010-000,false
+40,Victor Ramos,victor.r@email.com,29,M,Palmas,TO,77010-000,2023-06-12,true
+41,William Rocha,william.r@email.com,52,M,Rio Branco,AC,69900-000,2018-03-03,false
+42,Ximena Duarte,ximena.d@email.com,33,F,Foz do Iguaçu,PR,85850-000,2022-10-10,true
+43,Yuri Pacheco,yuri.p@email.com,27,M,Ji-Paraná,RO,76900-000,2023-02-08,true
+44,Zelia Andrade,zelia.a@email.com,49,F,Itabuna,BA,45600-000,2019-01-16,false
+45,Aline Correia,aline.c@email.com,35,F,São Luís,MA,65010-000,2021-08-27,true
+46,Breno Guedes,breno.g@email.com,28,M,Crato,CE,63100-000,2023-04-14,true
+47,Cintia Lopes,cintia.l@email.com,41,F,Franca,SP,14400-000,2020-09-09,true
+48,Diego Moura,diego.m@email.com,37,M,Sete Lagoas,MG,35700-000,2021-05-02,true
+49,Estela Fonseca,estela.f@email.com,24,F,Pato Branco,PR,85500-000,2023-06-03,true
+50,Fabio Torres,fabio.t@email.com,46,M,Rondonópolis,MT,78700-000,2019-12-20,false
