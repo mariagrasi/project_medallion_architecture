@@ -1,40 +1,51 @@
 import os
 import pandas as pd
 
-input_dir = '01-bronze-raw' #vamos ler os arquivos da pasta bronze (csv e json)
-output_dir = '02-silver-validated' #vamos salvar com parquet
+class NormalizeData:
+    def __init__(self, input_dir, output_dir):
+        self.input_dir = input_dir
+        self.output_dir = output_dir
+        os.makedirs(output_dir, exist_ok='True') #garante que a pasta de saída exista
 
-os.makedirs(output_dir, exist_ok='True') #garante que a pasta de saída exista
-
-for file in os.listdir(input_dir):
-    input_path = os.path.join(input_dir, file)
-    name, ext = os.path.splitext(file)
-    output_path = os.path.join(output_dir, f'{name}.parquet')
-
-    if ext.lower() == '.csv':
-        df = pd.read_csv(input_path)
-    elif ext.lower() == '.json':
-        #ler como lista de objetos
-        try:
-            df = pd.read_json(input_path)
-        except ValueError:
-            #Caso falhar, tenta ler como linhas separadas 
-            df = pd.read_json(input_path, line =True)
-    else:
-        print(f"Arquivo {file} ignorado (formato não suportado)")
-        continue
+    def convert_columns_to_string(self, df):
+        #converte colunas do tipo list para string, permitindo o uso do drop_duplicates
+            for col in df.columns:
+                if df[col].apply(lambda x: isinstance(x,list)).any():
+                    df[col] = df[col].apply(lambda x: str(x) if isinstance(x,list) else x)
+            return df
     
-    #converte colunas do tipo list para string, permitindo o uso do drop_duplicates
-    for col in df.columns:
-        if df[col].apply(lambda x: isinstance(x,list)).any():
-            df[col] = df[col].apply(lambda x: str(x) if isinstance(x,list) else x)
+    def load_df_from_file(self, file, ext):
+        input_path = os.path.join(self.input_dir, file)
 
-    df = df.drop_duplicates().reset_index(drop=True)
+        if ext.lower() == '.csv':
+            df = pd.read_csv(input_path)
+        elif ext.lower() == '.json':
+            #ler como lista de objetos
+            try:
+                df = pd.read_json(input_path)
+            except ValueError:
+                #Caso falhar, tenta ler como linhas separadas 
+                df = pd.read_json(input_path, line =True)
+        return df
 
-    #salva en formato parquet
+    def normalize_data(self):
+        for file in os.listdir(self.input_dir):
+            name, ext = os.path.splitext(file)
+            output_path = os.path.join(self.output_dir, f'{name}.parquet')
 
-    df.to_parquet(output_path, index=False)
-    print(f"Arquivo {file} normalizado e salvo como {output_path}")
+            df = self.load_df_from_file(file, ext)
+            df = self.convert_columns_to_string(df)
+            df = df.drop_duplicates().reset_index(drop=True)
+
+            #salva en formato parquet
+            df.to_parquet(output_path, index=False)
+            print(f"Arquivo {file} normalizado e salvo como {output_path}")
+
+if __name__ == '__main__':
+    normalize_data = NormalizeData(input_dir='01-bronze-raw', output_dir='02-silver-validated')
+    normalize_data.normalize_data()
+
+
 
 
 
