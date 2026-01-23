@@ -23,10 +23,15 @@ Este projeto implementa essas camadas com scripts Python para ingestão, transfo
 📦 project_medallion_architecture
 ├── 01-bronze-raw/              # Camada Bronze (dados brutos)
 ├── 02-silver-validated/        # Camada Silver (dados tratados)
-├── app.py # Arquivo principal de execução
-├── db.py # Configuração de conexão / DB
-├── get_data.py # Scripts para ingestão de dados
-├── normalize_data.py # Transformações de dados
+├── 03-gold-enriched/           # Camada Gold   (dados prontos para consumo analítico)
+│
+├── app.py                      # Arquivo principal de execução
+├── db.py                       # Configuração de conexão / DB
+├── get_data.py                 # Scripts para ingestão de dados
+├── normalize_data.py           # Transformações de dados
+│
+├── requirements.txt            # dependências utilizadas
+├── README.md                   # detalhes do projeto
 └── .gitignore
 ```
 
